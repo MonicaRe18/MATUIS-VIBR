@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibe | منيو احترافي</title>
+    <title>Vibe | المكان عليـ كيفــ كيفكــ</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -277,9 +277,9 @@
 
     <!-- شاشة رمز الاستجابة السريعة -->
     <div id="qr-page" class="min-h-screen flex flex-col items-center justify-center p-6 text-center transition-opacity duration-500">
-        <h1 class="font-header text-7xl sm:text-8xl md:text-9xl font-bold uppercase neon-text">ViBe</h1>
-        <h2 class="font-header text-2xl md:text-3xl mt-4 text-amber-300 uppercase">SCAN</h2>
-        <p class="mt-2 text-zinc-300 max-w-sm">اسكـن الـ QR المكان الوحيد Wi-Fi أسرع من ............. هتشوف بنفسك 😎⏳🌐!</p>
+        <h1 class="font-header text-7xl sm:text-8xl md:text-9xl font-bold uppercase neon-text">Vibe</h1>
+        <h2 class="font-header text-2xl md:text-3xl mt-4 text-amber-300 uppercase">SCAN THE VIBE</h2>
+        <p class="mt-2 text-zinc-300 max-w-sm">اسكـن الـ QR المكان الوحيد Wi-Fi أسرع من ..... هتشوف بنفسك 😎⏳🌐!</p>
         
         <div class="my-8 p-4 bg-white rounded-2xl shadow-lg shadow-amber-500/20">
             <img src="https://placehold.co/256x256/ffffff/000000?text=QR+CODE" alt="QR Code" class="w-48 h-48 md:w-64 md:h-64 rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/256x256/ffffff/000000?text=QR+Code';">
@@ -290,7 +290,7 @@
         </p>
 
         <button onclick="showMenu()" class="mt-10 font-header bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-10 rounded-lg shadow-lg shadow-amber-500/50 transition-all transform hover:scale-105">
-         افتــح المنيو بإيـدك اليميـــن 😎 
+            GO منيو 😎
         </button>
     </div>
 
@@ -348,7 +348,22 @@
                  <h3 class="section-title text-2xl sm:text-3xl">Power-Up | طاقة التركيز🌡️☕</h3>
                  <p class="text-zinc-400 mb-6 -mt-4">ابدأ جلستك بجرعة من التركيز والطاقة.</p>
                  <div class="space-y-6">
-                    <div class="menu-item"><div class="details"><span class="font-bold text-lg">قهوة تركيـ (سادة- محوج)</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">15/25</span></div><p class="item-description">سنجل / دبل</p></div>
+                    <div class="menu-item">
+                        <div class="details">
+                            <span class="font-bold text-lg whitespace-nowrap">قهوة تركي (سادة- محوج)</span>
+                            <div class="menu-item-line"></div>
+                            <div class="flex items-baseline gap-x-4 flex-shrink-0">
+                                <div class="flex items-baseline gap-x-2">
+                                    <span class="text-sm">سنجل</span>
+                                    <span class="text-amber-300 font-bold">15</span>
+                                </div>
+                                <div class="flex items-baseline gap-x-2">
+                                    <span class="text-sm">دبل</span>
+                                    <span class="text-amber-300 font-bold">25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">قهوة فرنسية</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">25</span></div></div>
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">قهوة شوكلت</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">30</span></div></div>
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">قهوة بندق قطع</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">30</span></div></div>
@@ -416,7 +431,7 @@
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">شيبسي صغير</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">15</span></div></div>
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">طبق تسالي متوسط / كبير</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">25/30</span></div></div>
                 </div>
-                <h3 class="sub-section-title">مياه💧🧴</h3>
+                <h3 class="sub-section-title">مياه�🧴</h3>
                 <div class="space-y-6">
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">مياه صغير</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">10</span></div></div>
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">مياه كبير</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">15</span></div></div>
@@ -491,7 +506,7 @@
         </main>
         
         <footer class="text-center mt-16 pb-8">
-            <p class="font-header text-lg text-zinc-400">#BeBoVibe</p>
+            <p class="font-header text-lg text-zinc-400">#VibeCafe</p>
         </footer>
     </div>
 
@@ -500,10 +515,10 @@
         
         // --- إعدادات الروليت ---
         const prizes = [
-            { text: 'مشروب مجاني', color: '#B91C1C' }, { text: 'خصم 10%', color: '#B45309' },
-            { text: 'حاول مرة أخرى', color: '#4A5568' }, { text: 'ربع ساعة PS', color: '#047857' },
-            { text: 'طبق تسالي', color: '#B91C1C' }, { text: 'خصم 5%', color: '#B45309' },
-            { text: 'حجر شيشة', color: '#4A5568' }, { text: 'نص ساعة هدية', color: '#047857' }
+            { text: 'كسبــبت بيبسي مجاني', color: '#B91C1C' }, { text: 'كسبــبت خـصم 5% ', color: '#B45309' },
+            { text: 'حاول مرة أخرى', color: '#4A5568' }, { text: 'كسبــبت ربع ساعة PS', color: '#047857' },
+            { text: 'كسبــبت طبق تسالي', color: '#B91C1C' }, { text: ' خســرت ادفع 5 جنيه', color: '#B45309' },
+            { text: 'كسبــبت حجر معسل', color: '#4A5568' }, { text: 'ادفع لصاحبك ساعة بلايستيشن', color: '#047857' }
         ];
         let rotation = 0;
         let isSpinning = false;
@@ -556,7 +571,7 @@
                 const winningSegmentIndex = Math.floor(segments - (actualRotation / (360 / segments))) % segments;
                 const prize = prizes[winningSegmentIndex];
                 
-                resultDiv.textContent = `مبروك! كسبت: ${prize.text}`;
+                resultDiv.textContent = `مبروك يــا معلــم! : ${prize.text}`;
                 isSpinning = false;
                 spinButton.disabled = false;
             }, 5000); // Match CSS transition time
