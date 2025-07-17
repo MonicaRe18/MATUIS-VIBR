@@ -265,7 +265,7 @@
         }
         #roulette-result {
             font-family: 'Changa', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.2rem; /* تم تصغير حجم الخط ليلائم النص الطويل */
             color: #fde047;
             margin-top: 1rem;
             min-height: 2.5rem;
@@ -277,20 +277,20 @@
 
     <!-- شاشة رمز الاستجابة السريعة -->
     <div id="qr-page" class="min-h-screen flex flex-col items-center justify-center p-6 text-center transition-opacity duration-500">
-        <h1 class="font-header text-7xl sm:text-8xl md:text-9xl font-bold uppercase neon-text">ViBe</h1>
-        <h2 class="font-header text-2xl md:text-3xl mt-4 text-amber-300 uppercase">SCAN </h2>
+        <h1 class="font-header text-7xl sm:text-8xl md:text-9xl font-bold uppercase neon-text">Vibe</h1>
+        <h2 class="font-header text-2xl md:text-3xl mt-4 text-amber-300 uppercase">SCAN THE VIBE</h2>
         <p class="mt-2 text-zinc-300 max-w-sm">اسكـن الـ QR المكان الوحيد Wi-Fi أسرع من ................. هتشوف بنفسك 😎⏳🌐!</p>
         
         <div class="my-8 p-4 bg-white rounded-2xl shadow-lg shadow-amber-500/20">
-            <img src="https://placehold.co/256x256/ffffff/000000?text=QR+CODE" alt="QR Code" class="w-48 h-48 md:w-64 md:h-64 rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/256x256/ffffff/000000?text=QR+Code';">
+            <img src="wifi.jpeg" alt="QR Code" class="w-48 h-48 md:w-64 md:h-64 rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/256x256/ffffff/000000?text=QR+Code';">
         </div>
         
         <p class="max-w-md mx-auto text-zinc-400">
-         "اتصل بالـ Wi-Fi قبل ما يفصـل، احجز غرفتك بدون ما تتوه، وبس، اطّلع على أحدث العروض والبطولات قبل ما تفوتك!"
+         "اتصل بالـ Wi-Fi قبل ما يفصـل، احجز الروووم قبل ما تتوه، وبس،  !"
         </p>
 
         <button onclick="showMenu()" class="mt-10 font-header bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-10 rounded-lg shadow-lg shadow-amber-500/50 transition-all transform hover:scale-105">
-         المنيو بإيـدك اليميـــن 😎 
+         افتــــح المنيو بإيـدك اليميـــن 😎 
         </button>
     </div>
 
@@ -430,7 +430,7 @@
                 <h3 class="section-title text-2xl sm:text-3xl">ركن التسالي 🍟🍿</h3>
                 <p class="text-zinc-400 mb-8 -mt-4">عشان تكمل متعة اللعب أو المشاهدة.</p>
                 <div class="space-y-6">
-                    <div class="menu-item"><div class="details"><span class="font-bold text-lg">فشار</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">20</span></div></div>
+                    <div class="menu-item"><div class="details"><span class="font-bold text-lg">اندومـــي</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">20</span></div></div>
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">شيبسي كبير</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">20</span></div></div>
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">شيبسي صغير</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">15</span></div></div>
                     <div class="menu-item"><div class="details"><span class="font-bold text-lg">طبق تسالي متوسط / كبير</span><div class="menu-item-line"></div><span class="text-amber-300 font-bold">25/30</span></div></div>
@@ -519,10 +519,14 @@
         
         // --- إعدادات الروليت ---
         const prizes = [
-            { text: 'كسبــبت بيبسي مجاني', color: '#B91C1C' }, { text: 'كسبــبت خـصم 5% ', color: '#B45309' },
-            { text: 'حاول مرة أخرى', color: '#4A5568' }, { text: 'كسبــبت ربع ساعة PS', color: '#047857' },
-            { text: 'كسبــبت طبق تسالي', color: '#B91C1C' }, { text: ' خســرت ادفع 5 جنيه', color: '#B45309' },
-            { text: 'كسبــبت حجر معسل', color: '#4A5568' }, { text: 'ادفع لصاحبك ساعة بلايستيشن', color: '#047857' }
+            { text: 'قهوة مجانية ☕', color: '#B91C1C' }, 
+            { text: 'مشروب مجاني 🥤', color: '#B45309' },
+            { text: 'طبق تسالي 🍿', color: '#4A5568' }, 
+            { text: 'حجر شيشة 🌬️', color: '#047857' },
+            { text: 'خصم 10% 💰', color: '#1E40AF' }, 
+            { text: 'ساعة بلايستيشن 🎮', color: '#6B21A8' },
+            { text: 'حظ سعيد 😔', color: '#4A5568' }, 
+            { text: 'ميكس فاخر ✨', color: '#B45309' }
         ];
         let rotation = 0;
         let isSpinning = false;
@@ -538,7 +542,7 @@
             const size = wheel.width;
             const center = size / 2;
             ctx.clearRect(0, 0, size, size);
-            ctx.font = `bold ${size * 0.04}px Changa`;
+            ctx.font = `bold ${size * 0.035}px Changa`; // تم تعديل حجم الخط
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             
@@ -572,13 +576,19 @@
 
             setTimeout(() => {
                 const actualRotation = rotation % 360;
-                const winningSegmentIndex = Math.floor(segments - (actualRotation / (360 / segments))) % segments;
+                
+                // --- منطق تحديد الفائز المصحح ---
+                // المؤشر ثابت في الأعلى (عند زاوية 270 درجة).
+                // نحسب أي شريحة من العجلة تستقر عند هذا الموضع بعد الدوران.
+                const anglePerSegmentDegrees = 360 / segments;
+                const winningAngle = (270 - actualRotation + 360) % 360;
+                const winningSegmentIndex = Math.floor(winningAngle / anglePerSegmentDegrees);
                 const prize = prizes[winningSegmentIndex];
                 
-                resultDiv.textContent = `مبروك يــا معلــم! : ${prize.text}`;
+                resultDiv.textContent = `مبروك! لقد فزت بـ: ${prize.text}`;
                 isSpinning = false;
                 spinButton.disabled = false;
-            }, 5000); // Match CSS transition time
+            }, 5000); // يجب أن يتطابق هذا الوقت مع وقت الانتقال في CSS
         }
 
         function showMenu() {
@@ -665,6 +675,7 @@
         // عند تحميل الصفحة
         window.addEventListener('DOMContentLoaded', () => {
              // يمكن ترك هذا فارغًا أو إضافة أي تهيئة أولية
+             drawWheel(); // ارسم العجلة عند تحميل الصفحة
         });
     </script>
 </body>
